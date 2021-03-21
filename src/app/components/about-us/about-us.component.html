@@ -1,0 +1,215 @@
+<div class="container">
+    <h1 class="text-center text-primary"> Directives </h1>
+    <hr>
+    <!-- interpolation binding -->
+    <h3 class="mt-3"> Structural Directives ex1:-</h3>
+    <div class="row">
+
+        <div class="col-md-6">
+            <ul>
+                <li> Basically, it’s used to add or remove the DOM elements. Asterisk (*) is used when these directives
+                    are added into the template.
+
+                    *ngIf, *ngFor, *ngSwitchCase are some commonly used structural directives.
+                </li>
+                <li>
+                    Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure,
+                    typically by adding, removing, or manipulating elements
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course Name
+                        </th>
+                        <th>
+                            Version
+                        </th>
+                        <th>
+                            Framework
+                        </th>
+                        <th>
+                            Duration
+                        </th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let data of courses">
+                        <td>
+                            {{data.coursename}}
+                        </td>
+                        <td>
+                            {{data.version}}
+                        </td>
+                        <td>
+                            {{data.framework}}
+                        </td>
+                        <td>
+                            {{data.duration}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngIf="!courses || courses.length==0">
+                        <td colspan="4">
+                            <h5> No data to display </h5>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="container">
+
+        <!-- interpolation binding -->
+        <h3 class="mt-3"> Structural Directives ex2:-</h3>
+        <div class="row">
+
+            <div class="col-md-6">
+                <ul>
+                    <li> Basically, it’s used to add or remove the DOM elements. Asterisk (*) is used when these
+                        directives are added into the template.
+
+                        *ngIf, *ngFor, *ngSwitchCase are some commonly used structural directives.
+                    </li>
+                    <li>
+                        Structural directives are responsible for HTML layout. They shape or reshape the DOM's
+                        structure, typically by adding, removing, or manipulating elements
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Employee Id
+                            </th>
+                            <th>Employee Name
+                            </th>
+                            <th>
+                                Employee Salary
+                            </th>
+                            <th>
+                                Gender
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let employee of employees">
+                            <td>
+                                {{employee.empid}}
+                            </td>
+                            <td>
+                                {{employee.empname}}
+                            </td>
+                            <td>
+                                {{employee.empsalary}}
+                            </td>
+                            <td>
+                                {{employee.empgender}}
+                            </td>
+
+                        </tr>
+
+                        <tr *ngIf="!employees || employees.length==0">
+                            <td colspan="4">
+                                <h5> No data to display </h5>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+        <hr>
+
+
+
+        <div class="container">
+
+            <h3 class="mt-3"> Structural Directives ex3:-</h3>
+            <div class="row">
+
+                <div class="col-md-6">
+                    <ul>
+                        <li> Basically, it’s used to add or remove the DOM elements. Asterisk (*) is used when these
+                            directives are added into the template.
+
+                            *ngIf, *ngFor, *ngSwitchCase are some commonly used structural directives.
+                        </li>
+                        <li>
+                            Structural directives are responsible for HTML layout. They shape or reshape the DOM's
+                            structure, typically by adding, removing, or manipulating elements
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+
+                    <ul>
+                        <li *ngFor="let color of colors"> {{color}} </li>
+                    </ul>
+
+                </div>
+            </div>
+            <hr>
+
+
+            <div class="container">
+
+                <h3 class="mt-3"> Attribute Directives ex1:-</h3>
+                <div class="row">
+    
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Attribute directives are used as attributes of elements, basically, it changes the appearance or behavior of an element, 
+                                component or another directive. By default, angular provide two attribute directives, these are,
+                            </li>
+                            <li>
+                                NgClass
+                                By using that we can add or remove CSS class dynamically i.e. on the basis of the certain condition.
+                                
+                                NgStyle
+                                By using that we can add or remove styles dynamically i.e. on the basis of the certain condition.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+    
+                        <h3 [ngStyle]="{'background-color':'lightgrey', 'color':'grey', 'padding':'12px' }">
+                hello</h3>
+                      
+                <h1 [ngStyle]="{'color':heading === 2 ? 'red' : 'green'}"> heading </h1>
+
+                <h1 [ngStyle]="{'color':username === 'Nikhil' ? 'red' : 'green'}"> User is {{username}} </h1>
+    
+
+                <br>
+                <h1> Ng Class Examples</h1>
+
+                <h4 [ngClass]="['cls1','cls2','cls3']"> ngclass binding</h4>
+
+                <br>
+                <h1> Custom Directives Examples</h1>
+                <h1 appChangeText> </h1>
+               
+                    </div>
+
+
+                </div>
+                <hr>

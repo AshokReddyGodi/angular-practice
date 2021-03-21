@@ -1,0 +1,28 @@
+
+table, th, td, tr, thead, tbody {
+    border: 2px solid darkred;
+    /* padding: 12px; */
+    border-collapse: collapse;
+}
+
+th {
+    padding: 14px;
+}
+
+td {
+    padding: 6px;
+}
+
+
+
+/* ngclass binding */
+
+.cls1 {
+    border:2px solid red;
+}
+.cls2 {
+    color:yellow;
+}
+.cls3{
+padding: 20px;
+}
